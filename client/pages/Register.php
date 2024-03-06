@@ -24,9 +24,11 @@
                 <input id="email" name="email" type="email" placeholder="Enter your email" autofocus>
                 <label for="password">Password</label>
                 <input id="password" name="password" type="password" placeholder="Enter your password">
-                <button class="btn-primary text-white" type="submit">Login</button>
+                <label for="password">Re-type Password</label>
+                <input id="retype-password" name="retype-password" type="password" placeholder="Re-type your password">
+                <button class="btn-primary text-white" type="submit">Register</button>
             </form>
-            <p>Don't have an account? <a href="#">Register</a></p>
+            <p>Already have an account? <a href="./Login.php">Sign in</a></p>
         </section>
     </main>
 </body>
