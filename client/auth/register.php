@@ -1,4 +1,5 @@
 <?php
+include "../database/connection.php";
 
 if(isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["retype-password"])){
     // functions to validate the data 
