@@ -13,10 +13,10 @@ echo "
                     </header>
                     <div class='h-full w-full flex items-center py-5'>
                         <div class='w-44 h-full'>
-                            <div class='flex items-center gap-3 py-2 px-4 rounded-md bg-[#EEE]'>
+                            <button class='flex items-center gap-3 py-2 px-4 rounded-md bg-slate-200 hover:bg-slate-300'>
                                 <i class='fa fa-gear text-slate-500'></i>
                                 <h3 class='font-medium text-sm text-slate-500'>Settings</h3>
-                            </div>
+                            </button>
                         </div>
                         <div class='w-full h-full px-5'>
                             <div class='flex items-center border-b border-b-slate-200 py-4 justify-between'>
@@ -24,11 +24,11 @@ echo "
                                     <h3 class='font-medium text-sm text-slate-600'>Profile</h3>
                                     <small class='text-slate-400'>Manage your profile by updating information</small>
                                 </div>
-                                <button class='border text-sm rounded-md py-2 px-5 font-semibold text-slate-600'>Manage</button>
+                                <button class='border text-sm rounded-md py-2 px-5 font-semibold text-slate-600 hover:bg-slate-200'>Manage</button>
                             </div>
                             <div class='flex items-center border-b border-b-slate-200 py-4 justify-between'>
                                 <h3 class='font-medium text-sm text-slate-600'>Change Password</h3>
-                                <button class='border text-sm rounded-md py-2 px-5 font-semibold text-slate-600'>Change</button>
+                                <button class='border text-sm rounded-md py-2 px-5 font-semibold text-slate-600 hover:bg-slate-200'>Change</button>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,8 @@ echo "
                 </div>
             </header>
             <ul class='h-full py-5'>
-                <li class='py-3 px-5 my-2' . ($currentFile == 'Student.php' ? ' bg-[#2F2F2F] rounded-md' : '') . ''><a href='./Student.php' class='flex items-center gap-2 justify-start text-sm font-medium text-slate-300 hover:text-white'><i class='w-5 fa-solid fa-plus'></i>Student</a></li>
+                <li class='py-3 px-5 my-2 " . ($currentFile == 'Student.php' ? 'bg-[#2F2F2F] rounded-md' : '') . "'><a href='./Student.php' class='flex items-center gap-2 justify-start text-sm font-medium text-slate-300 hover:text-white'><i class='w-5 fa-solid fa-plus'></i>Student</a></li>
+                <li class='py-3 px-5 my-2 " . ($currentFile == 'Grade.php' ? 'bg-[#2F2F2F] rounded-md' : '') . "'><a href='./Grade.php' class='flex items-center gap-2 justify-start text-sm font-medium text-slate-300 hover:text-white'><i class='w-5 fa-solid fa-file'></i>Grade</a></li>
             </ul>
             <div class='py-5 border-t border-t-[#2F2F2F]'>
                 <button type='button' id='openSettings' class='py-3 px-5 flex items-center gap-5 hover:bg-[#2F2F2F] w-full rounded-md'>

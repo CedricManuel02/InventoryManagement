@@ -4,14 +4,11 @@ $currentFiles = basename($_SERVER['PHP_SELF']);
 $name = '';
 
 switch ($currentFiles) {
-    case "Dashboard.php":
-        $name = "Dashboard";
-        break;
     case "Student.php":
         $name = "Student";
         break;
-    case "UserManagement.php":
-        $name = "User Management";
+    case "Grade.php":
+        $name = "Grade Management";
         break;
     default: 
         $name = "Page 404";
