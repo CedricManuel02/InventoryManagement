@@ -1,17 +1,16 @@
 <?php
 include "../database/connection.php";
 
+$input = $_GET['query'];
+
 // Query to fetch data from the database
-$query = "SELECT tbl_subject.subject_id, tbl_subject.subject_name FROM tbl_strand INNER JOIN tbl_subject ON tbl_subject.strand_id = tbl_strand.strand_id;";
+$query = "SELECT tbl_subject.subject_id, tbl_subject.subject_name FROM tbl_strand INNER JOIN tbl_subject ON tbl_subject.strand_id = tbl_strand.strand_id WHERE tbl_subject.strand_id = $input";
 $result = mysqli_query($connection, $query);
 
-if ($result) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo '<option value="' . $row["subject_id"] . '">' . $row["subject_name"] . '</option>';
-    }
-    mysqli_free_result($result);
-} else {
-    echo "Error: " . mysqli_error($connection);
+// Return the subject as JSON
+$subject = [];
+while ($row = mysqli_fetch_assoc($result)) {
+    $subject[] = $row;
 }
-mysqli_close($connection);
+echo json_encode($subject);
 ?>
